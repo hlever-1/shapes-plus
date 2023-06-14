@@ -1,4 +1,4 @@
-import { CanvasRenderingContext2D, createCanvas, Canvas, Fonts } from "canvas";
+import { CanvasRenderingContext2D, createCanvas, Canvas, Fonts } from "https://deno.land/x/skia_canvas@0.5.2/mod.ts";
 
 import { createCircle, CircleOptions, CircleReturn } from "./shapes/circle.ts";
 import { createText, TextOptions, TextReturn } from "./shapes/text.ts";
