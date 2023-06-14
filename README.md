@@ -3,7 +3,7 @@
 1- Can use commonJS modules and ES Modules
 ```
 # Resorce
-- [deno](https://deno.land/x/shapes_plus@v0.0.1/mod.ts)
+- [deno](https://deno.land/x/shapes_plus@v0.0.1)
 - [npm](https://www.npmjs.com/package/shapes-plus)
 
 # Compiling `for node js only`
