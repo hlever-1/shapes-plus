@@ -1,9 +1,9 @@
-# Update 0.0.2
+# Update 0.0.1
 ```
 1- Can use commonJS modules and ES Modules
 ```
 # Resorce
-- [deno](https://deno.land/x/shapes_plus@v0.0.2/mod.ts)
+- [deno](https://deno.land/x/shapes_plus@v0.0.1/mod.ts)
 - [npm](https://www.npmjs.com/package/shapes-plus)
 
 # Compiling `for node js only`
@@ -41,7 +41,7 @@ const shapes = new Shapes(/* options: ShapesOptions */);
 ### deno
 ```javascript
 // mod.ts
-import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.2/mod.ts";
+import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.1/mod.ts";
 const shapes = new Shapes(/* options: ShapesOptions */);
 ```
 
