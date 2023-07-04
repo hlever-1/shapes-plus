@@ -6,39 +6,7 @@
 - [deno](https://deno.land/x/shapes_plus@v0.0.4)
 - [npm](https://www.npmjs.com/package/shapes-plus)
 - [github](https://github.com/hlever-1/shapes-plus)
-
-# Compiling `for node js only`
-
-If you want to know the details, go [here](https://www.npmjs.com/package/canvas)
-
-OS | Command
------ | -----
-OS X | Using [Homebrew](https://brew.sh/):<br/>`brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman`
-Ubuntu | `sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
-Fedora | `sudo yum install gcc-c++ cairo-devel pango-devel libjpeg-turbo-devel giflib-devel`
-Solaris | `pkgin install cairo pango pkg-config xproto renderproto kbproto xextproto`
-OpenBSD | `doas pkg_add cairo pango png jpeg giflib`
-Windows | See the [wiki](https://github.com/Automattic/node-canvas/wiki/Installation:-Windows)
-Others | See the [wiki](https://github.com/Automattic/node-canvas/wiki)
-
 # Install
-### npm
-```
-npm install shapes-plus --save
-```
-
-```javascript
-// index.js
-const { Shapes } = require("shapes-plus");
-const shapes = new Shapes(/* options: ShapesOptions */);
-```
-or
-```javascript
-// index.js
-import { Shapes } from "shapes-plus";
-const shapes = new Shapes(/* options: ShapesOptions */);
-```
-
 ### deno
 ```javascript
 // mod.ts
@@ -55,13 +23,12 @@ Key | Type
 --- | ----
 createCircle | method
 createText | method
-createImages | method
+createImage | method
 createLine | method
 createRect | method
 createRhombus | method
 createStar | method
 createTriangle | method
-setCanvasSize | method
 toBuffer | method
 toSave | method
 addFontFamily | method
