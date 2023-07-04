@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-this-alias
-import { CanvasRenderingContext2D, Image } from "https://deno.land/x/skia_canvas@0.5.2/mod.ts";
+import { CanvasRenderingContext2D, Image  } from "canvas";
 export function createImage(ctx: CanvasRenderingContext2D, options: ImageOptions) : ImageReturn
 {
     if(!options) options ={};

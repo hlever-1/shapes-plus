@@ -1,4 +1,4 @@
-import { CanvasRenderingContext2D } from "https://deno.land/x/skia_canvas@0.5.2/mod.ts";
+import { CanvasRenderingContext2D } from "canvas";
 
 export function fill(ctx: CanvasRenderingContext2D, color: string)
 {
