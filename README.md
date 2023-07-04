@@ -1,16 +1,15 @@
-# Update 0.0.4
 ```
 1- Can use commonJS modules and ES Modules
 ```
 # Resorce
-- [deno](https://deno.land/x/shapes_plus@v0.0.4)
+- [deno](https://deno.land/x/shapes_plus@v0.0.5)
 - [npm](https://www.npmjs.com/package/shapes-plus)
 - [github](https://github.com/hlever-1/shapes-plus)
 # Install
 ### deno
 ```javascript
 // mod.ts
-import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.4/mod.ts";
+import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.5/mod.ts";
 const shapes = new Shapes(/* options: ShapesOptions */);
 ```
 
@@ -107,7 +106,7 @@ triangle.draw({x:300, y:200, color:"pink", sideBC: 50, rotate:20});
 `Warning` If you use windows os you must add font family in your windows before use `addFontFamily`
 ```javascript
 // Add new Font Family 
-const { addFontFamily } = require("shapes-plus");
+import { addFontFamily } from "shapes-plus";
 addFontFamily(/* path: string, setName: string) // You can add any name in setName
 ```
 for examlpe:
