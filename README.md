@@ -55,13 +55,12 @@ Key | Type
 --- | ----
 createCircle | method
 createText | method
-createImages | method
+createImage | method
 createLine | method
 createRect | method
 createRhombus | method
 createStar | method
 createTriangle | method
-setCanvasSize | method
 toBuffer | method
 toSave | method
 addFontFamily | method
