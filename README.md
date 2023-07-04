@@ -1,14 +1,11 @@
-# Update 0.0.4
+# Update 1.2.0:
 ```
-1- Can use commonJS modules and ES Modules
+1- Change js to ts
+2- Add createTriangle
+3- Add addFontFamily
+4- Fix some mistakes
 ```
-# Resorce
-- [deno](https://deno.land/x/shapes_plus@v0.0.4)
-- [npm](https://www.npmjs.com/package/shapes-plus)
-- [github](https://github.com/hlever-1/shapes-plus)
-
-# Compiling `for node js only`
-
+# Compiling
 If you want to know the details, go [here](https://www.npmjs.com/package/canvas)
 
 OS | Command
@@ -22,34 +19,13 @@ Windows | See the [wiki](https://github.com/Automattic/node-canvas/wiki/Installa
 Others | See the [wiki](https://github.com/Automattic/node-canvas/wiki)
 
 # Install
-### npm
 ```
-npm install shapes-plus --save
+npm install canvas-form --save
 ```
-
 ```javascript
-// index.js
-const { Shapes } = require("shapes-plus");
-const shapes = new Shapes(/* options: ShapesOptions */);
+const { Forms } = require("canvas-form");
+let form = new Forms();
 ```
-or
-```javascript
-// index.js
-import { Shapes } from "shapes-plus";
-const shapes = new Shapes(/* options: ShapesOptions */);
-```
-
-### deno
-```javascript
-// mod.ts
-import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.4/mod.ts";
-const shapes = new Shapes(/* options: ShapesOptions */);
-```
-
-```
-$ deno run -A --unstable mod.ts
-```
-
 # Values
 Key | Type 
 --- | ----
@@ -70,49 +46,49 @@ canvas | prototype
 ctx | prototype 
 # Rect
 ```javascript
-const rect = shapes.createRect(/* options: RectOptions */);
+let rect = form.createRect(/* options: RectOptions */);
 rect.draw({x:200, y:100, color:"blue", drawType:"stroke"})
 rect.draw({x:500, y:100, height:110, width:110});
 ```
 ![Rect](https://cdn.discordapp.com/attachments/716228498825412690/987693454387707924/unknown.png)
 # Circle
 ```javascript
-const circle = shapes.createCircle(/* options: CircleOptions */);
+let circle = form.createCircle(/* options: CircleOptions */);
 circle.draw({x:200, y:100, color:"blue", drawType:"stroke"});
 circle.draw({x:500, y:100, radius:60});
 ```
 ![Circle](https://cdn.discordapp.com/attachments/716228498825412690/987693492606230538/unknown.png)
 # Text
 ```javascript
-const text = shapes.createText(/* options: TextOptions */);
+let text = form.createText(/* options: TextOptions */);
 text.draw({x:200, y:100, color:"blue", drawType:"stroke", text:"Hello"});
 text.draw({x:500, y:100, text:"Hi", fontFamily:"Impact", size:60, textAlign:"left", width:70});
 ```
 ![Text](https://cdn.discordapp.com/attachments/716228498825412690/987693637255176262/unknown.png)
 # Line
 ```javascript
-const line = shapes.createLine(/* options: LineOptions */);
+let line = form.createLine(/* options: LineOptions */);
 line.draw({x:200, y:100, endX:450, endY:100, color:"blue", lineWidth:3});
 line.draw({x:200, y:150, endX:450, endY:150, lineWidth:5});
 ```
 ![Line](https://cdn.discordapp.com/attachments/716228498825412690/987693692238327808/unknown.png)
 # Rhombus
 ```javascript
-const rhombus = shapes.createRhombus(/* options: RhombusOptions */);
+let rhombus = form.createRhombus(/* options: RhombusOptions */);
 rhombus.draw({x:200, y:200, color:"blue", drawType:"stroke"});
 rhombus.draw({x:500, y:200, height:80 ,width:90});
 ```
 ![Rhombus](https://cdn.discordapp.com/attachments/716228498825412690/987693537468510218/unknown.png)
 # Star
 ```javascript
-const star = shapes.createStar(/* options: StarOptions */);
+let star = form.createStar(/* options: StarOptions */);
 star.draw({x:200, y:100, color:"blue", drawType:"stroke"});
 star.draw({x:500, y:100, spikes:9, innerRadius:20, outerRadius:30});
 ```
 ![Star](https://cdn.discordapp.com/attachments/716228498825412690/987693591600181309/unknown.png)
 # Image
 ```javascript
-const image = shapes.createImage(/* options: ImageOptions */);
+let image = form.createImage(/* options: ImageOptions */);
 image.draw({x:200, y:500, height:120, width:120, path:"https://cdn.discordapp.com/attachments/716228498825412690/987695097107873792/unknown.png"}).then(async img=>
     {
         await image.draw({x:400, y:500, isCircle:true, radius:60, path:"https://cdn.discordapp.com/attachments/716228498825412690/987695097107873792/unknown.png"});
@@ -123,7 +99,7 @@ image.draw({x:200, y:500, height:120, width:120, path:"https://cdn.discordapp.co
 ![Image](https://cdn.discordapp.com/attachments/716228498825412690/987697674469920778/unknown.png)
 # Triangle
 ```javascript
-const triangle = shapes.createTriangle(/* options: TriangleOptions */);
+let triangle = form.createTriangle(/* options: TriangleOptions */);
 triangle.draw({x:200, y:100, color:"red"});
 triangle.draw({x:300, y:100, color:"blue", drawType:"stroke"});
 triangle.draw({x:400, y:100, color:"green", rotate:70});
@@ -135,58 +111,53 @@ triangle.draw({x:300, y:200, color:"pink", sideBC: 50, rotate:20});
 `Warning` If you use windows os you must add font family in your windows before use `addFontFamily`
 ```javascript
 // Add new Font Family 
-const { addFontFamily } = require("shapes-plus");
-addFontFamily(/* path: string, setName: string) // You can add any name in setName
+form.addFontFamily(/* path: string, setName: string, options?: {style?: string, weight?: string} */) // You can add any name in setName
 ```
 for examlpe:
 ```javascript
-addFontFamily("./Halimun.ttf","Halimun");
-
-const text = shapes.createText();
+form.addFontFamily("./Halimun.ttf","Halimun");
+let text = form.createText();
 text.draw({x:200, y:100, text:"Hello", fontFamily:"Halimun"});
 text.draw({x:500, y:100, text:"Hello", fontFamily:"Impact"});
 ```
 ![font family](https://cdn.discordapp.com/attachments/716228498825412690/1034159213125046394/unknown.png)
+# Canvas size
+```javascript
+// change size canvas 
+form.setCanvasSize(height, width) // default height = 1920, width = 1080
+```
 # Other method
 ```javascript
 // save Image
-shapes.toSave(path); // path = "save local device without extension"
+form.toSave(path, type); // path = "save local device without .", type = "png" | "jpeg"
 
 // convert to Buffer
-shapes.toBuffer() // return Buffer
+form.toBuffer() // return Buffer
 ```
 # One example in detail
 ```javascript
-shapes.createRect(/*options*/).draw({x:500, y:100, color:"red"}).draw({x:700, y:100, color:"red"}).draw({x:900, y:100, color:"red"});
+form.createRect(/*options*/).draw({x:500, y:100, color:"red"}).draw({x:700, y:100, color:"red"}).draw({x:900, y:100, color:"red"});
 ```
 OR
 ```javascript
-shapes.createRect({y:100, color:"red"}).draw({x:500}).draw({x:700}).draw({x:900});
+form.createRect({y:100, color:"red"}).draw({x:500}).draw({x:700}).draw({x:900});
 ```
 OR
 ```javascript
-const rect = shapes.createRect(/*options*/);
+let rect = form.createRect(/*options*/);
 rect.draw({x:500, y:100, color:"red"});
 rect.draw({x:700, y:100, color:"red"});
 rect.draw({x:900, y:100, color:"red"});
 ```
 OR
 ```javascript
-const rect = shapes.createRect({color:"red", y:100});
+let rect = form.createRect({color:"red", y:100});
 rect.draw({x:500});
 rect.draw({x:700});
 rect.draw({x:900});
 ```
 ![draws](https://cdn.discordapp.com/attachments/716228498825412690/987690247745863750/unknown.png)
 # Options
-
-## ShapesOptions
-
-Key | Type | Default
---- | ---- | ----- 
-width? | Number | 1920
-height? | Number | 1080
-canvas? | Canvas | Canvas
 
 ## RectOptions
 
