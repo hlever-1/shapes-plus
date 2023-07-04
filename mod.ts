@@ -23,8 +23,8 @@ export class Shapes
         }
         else {
             this.canvas = options.canvas;
-            if(options.width) this.canvas.width = 1920;
-            if(options.height) this.canvas.height = 1080;
+            if(options.width) this.canvas.width = options.width;
+            if(options.height) this.canvas.height = options.height;
         }
         this.ctx = this.canvas.getContext('2d');
     }
