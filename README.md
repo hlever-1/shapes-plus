@@ -18,6 +18,10 @@ const shapes = new Shapes(/* options: ShapesOptions */);
 $ deno run -A --unstable mod.ts
 ```
 
+```javascript
+import { Shapes } from "shapes-plus";
+const shapes = new Shapes(/* options: ShapesOptions */);
+```
 # Values
 Key | Type 
 --- | ----
