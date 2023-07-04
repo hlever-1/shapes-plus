@@ -19,6 +19,7 @@ $ deno run -A --unstable mod.ts
 ```
 
 ```javascript
+// mod.ts
 import { Shapes } from "shapes-plus";
 const shapes = new Shapes(/* options: ShapesOptions */);
 ```
