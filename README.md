@@ -1,5 +1,5 @@
 ```
-1- Can use commonJS modules and ES Modules
+1- Fix some problim
 ```
 # Resorce
 - [deno](https://deno.land/x/shapes_plus@v0.0.5)
