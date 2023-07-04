@@ -39,29 +39,17 @@ import { Shapes } from "shapes-plus";
 const shapes = new Shapes(/* options: ShapesOptions */);
 ```
 
-### deno
-```javascript
-// mod.ts
-import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.4/mod.ts";
-const shapes = new Shapes(/* options: ShapesOptions */);
-```
-
-```
-$ deno run -A --unstable mod.ts
-```
-
 # Values
 Key | Type 
 --- | ----
 createCircle | method
 createText | method
-createImages | method
+createImage | method
 createLine | method
 createRect | method
 createRhombus | method
 createStar | method
 createTriangle | method
-setCanvasSize | method
 toBuffer | method
 toSave | method
 addFontFamily | method
