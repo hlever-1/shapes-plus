@@ -1,4 +1,3 @@
-# Update 1.2.0:
 ```
 1- Change js to ts
 2- Add createTriangle
