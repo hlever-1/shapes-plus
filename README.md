@@ -134,13 +134,13 @@ triangle.draw({x:300, y:200, color:"pink", sideBC: 50, rotate:20});
 ```javascript
 // Add new Font Family 
 import { addFontFamily } from "shapes-plus";
-addFontFamily(/* path: string, setName: string) // You can add any name in setName
+addFontFamily(/* path: string, setName: string */) // You can add any name in setName
 ```
 Or
 ```javascript
 // Add new Font Family 
 const { addFontFamily } = require("shapes-plus");
-addFontFamily(/* path: string, setName: string) // You can add any name in setName
+addFontFamily(/* path: string, setName: string */) // You can add any name in setName
 ```
 for examlpe:
 ```javascript
