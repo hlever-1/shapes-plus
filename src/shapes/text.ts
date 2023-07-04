@@ -33,8 +33,6 @@ export function createText(ctx: CanvasRenderingContext2D, options: TextOptions) 
                 ctx.font = `${size}px ${fontFamily}`;
                 ctx.textAlign =textAlign;
                 ctx.fillStyle = color;
-                const maxWidth = width / ( size * text.length / 1.667);
-                ctx.scale(maxWidth <= 0 ? 1 : maxWidth > 1 ? 1 : maxWidth, 1);
                 if(isWidth) ctx.fillText(text,x,y,width);
                 else ctx.fillText(text,x,y);
                 ctx.restore();
@@ -46,8 +44,6 @@ export function createText(ctx: CanvasRenderingContext2D, options: TextOptions) 
                 ctx.font = `${size}px ${fontFamily}`;
                 ctx.textAlign =textAlign;
                 ctx.strokeStyle = color;
-                const maxWidth = width / ( size * text.length / 1.667);
-                ctx.scale(maxWidth <= 0 ? 1 : maxWidth > 1 ? 1 : maxWidth, 1);
                 if(isWidth) ctx.strokeText(text, x, y ,width);
                 else ctx.strokeText(text, x, y);
                 ctx.restore();
