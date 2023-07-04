@@ -7,7 +7,7 @@
 - [npm](https://www.npmjs.com/package/shapes-plus)
 - [github](https://github.com/hlever-1/shapes-plus)
 
-# Compiling `for node js only`
+# Compiling
 
 If you want to know the details, go [here](https://www.npmjs.com/package/canvas)
 
