@@ -1,16 +1,16 @@
 # Update
 ```
-1- Fix some problim
+1- update
 ```
 # Resorce
-- [deno](https://deno.land/x/shapes_plus@v0.0.5)
+- [deno](https://deno.land/x/shapes_plus@v0.0.5.1)
 - [npm](https://www.npmjs.com/package/shapes-plus)
 - [github](https://github.com/hlever-1/shapes-plus)
 # Install
 ### deno
 ```javascript
 // mod.ts
-import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.5/mod.ts";
+import { Shapes } from "https://deno.land/x/shapes_plus@v0.0.5.1/mod.ts";
 const shapes = new Shapes(/* options: ShapesOptions */);
 ```
 
